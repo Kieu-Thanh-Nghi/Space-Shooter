@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 381042727}
   - component: {fileID: 381042726}
+  - component: {fileID: 381042728}
   m_Layer: 0
   m_Name: Engine_01_Basic
   m_TagString: Untagged
@@ -198,14 +199,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381042725}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.055701077, y: -3.884, z: 0}
-  m_LocalScale: {x: 0.8, y: 1.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.008597843, y: -1.2880001, z: 0}
+  m_LocalScale: {x: 1.6, y: 3, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 736969849}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &381042728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381042725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d00f2b645ff2954cb740532869c29b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &736969847
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736969849}
   - component: {fileID: 736969848}
+  - component: {fileID: 736969850}
   m_Layer: 0
   m_Name: Short-Lazer-Ship
   m_TagString: Untagged
@@ -286,10 +300,23 @@ Transform:
   m_LocalPosition: {x: -0.06, y: -3.24, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 381042727}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &736969850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736969847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ee2e15dbe9fa946900e448a5e06249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2051722504
 GameObject:
   m_ObjectHideFlags: 0
