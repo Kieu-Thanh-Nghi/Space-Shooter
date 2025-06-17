@@ -6,6 +6,7 @@ public class Playershooting : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float cuong_do;
+    [SerializeField] Vector3 bulletOffset;
     float tg;
     // Update is called once per frame
     void Update()
@@ -22,6 +23,6 @@ public class Playershooting : MonoBehaviour
 
     private void ShootBullet()
     {
-        Instantiate(bulletPrefab, transform.position, transform.rotation);
+        Instantiate(bulletPrefab, transform.position + bulletOffset, transform.rotation);
     }
 }
