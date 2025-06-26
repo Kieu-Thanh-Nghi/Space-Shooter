@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 779013896435897544}
   - component: {fileID: 8577759652094494623}
-  - component: {fileID: -6350998478996378932}
+  - component: {fileID: 1632621682350821911}
   - component: {fileID: -5772680686171217254}
+  - component: {fileID: -6350998478996378932}
   - component: {fileID: 3095978069636672126}
   m_Layer: 6
   m_Name: Enemy_01
@@ -87,27 +88,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &-6350998478996378932
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &1632621682350821911
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6744357962115527886}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa27b14f39e97fa40afc890dd64860ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 3095978069636672126}
+  damage: 3
 --- !u!61 &-5772680686171217254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,6 +128,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.024, y: 1.024}
   m_EdgeRadius: 0
+--- !u!50 &-6350998478996378932
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744357962115527886}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &3095978069636672126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,5 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7330d90779158240b1c4241ce1be769, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explotionPrefab: {fileID: 627478411459044065, guid: 5855cc63161b8644badec4024dd46c6e,
+  explosionPrefab: {fileID: 627478411459044065, guid: 5855cc63161b8644badec4024dd46c6e,
     type: 3}
+  maxHealth: 3
