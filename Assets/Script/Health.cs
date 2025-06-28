@@ -22,6 +22,8 @@ public class Health : MonoBehaviour
 
     public virtual void takeDamage(int dame)
     {
+        if (currentHealth <= 0) return;
+
         currentHealth -= dame;
         if(currentHealth <= 0)
         {
