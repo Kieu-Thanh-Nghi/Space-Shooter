@@ -100,7 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletSpeed: 10
+  lifeTime: 1.5
+  soundTime: 1
   dame: 1
+  sound: {fileID: 6097737871451135328, guid: 5c7bcd4b8d9ca5246a1c3eee2230539a, type: 3}
 --- !u!61 &-4252329775424176228
 BoxCollider2D:
   m_ObjectHideFlags: 0

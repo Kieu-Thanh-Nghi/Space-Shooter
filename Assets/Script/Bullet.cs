@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] float BulletSpeed;
+    [SerializeField] float BulletSpeed, lifeTime, soundTime;
     [SerializeField] int dame = 0;
+    [SerializeField] GameObject sound;
+
+    private void OnEnable()
+    {
+        Destroy(gameObject, lifeTime);
+        Destroy(Instantiate(sound), soundTime);
+    }
     // Update is called once per frame
     void Update()
     {

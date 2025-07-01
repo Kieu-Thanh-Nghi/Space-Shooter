@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 3095978069636672126}
-  damage: 3
+  damage: 1
 --- !u!61 &-5772680686171217254
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +164,4 @@ MonoBehaviour:
   explosionPrefab: {fileID: 627478411459044065, guid: 5855cc63161b8644badec4024dd46c6e,
     type: 3}
   maxHealth: 3
+  exploTime: 0.8
