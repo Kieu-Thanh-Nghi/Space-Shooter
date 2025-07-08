@@ -15,7 +15,7 @@ public class BattleFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(EnemyHealth.LivingEnemyCount <= 0)
+        if(EnemyHealth.LivingEnemyCount <= 0 && playerHealth != null)
         {
             OnGameWin();
         }
@@ -30,6 +30,7 @@ public class BattleFlow : MonoBehaviour
 
     void OnGameOver()
     {
+        EnemyHealth.LivingEnemyCount = 0;
         gameOverUI.SetActive(true);
         bgMusic.SetActive(false);
     }

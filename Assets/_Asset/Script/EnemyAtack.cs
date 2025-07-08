@@ -12,8 +12,8 @@ public class EnemyAtack : MonoBehaviour
         var playerHealth = collision.GetComponent<PlayerHealth>();
         if (playerHealth != null)
         {
-            playerHealth.takeDamage(damage);
             health.takeDamage(1000);
+            playerHealth.takeDamage(damage);
         }
     }
 
