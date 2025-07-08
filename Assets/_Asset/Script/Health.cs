@@ -5,14 +5,25 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] protected GameObject explosionPrefab;
-    [SerializeField] protected int maxHealth;
     [SerializeField] protected float exploTime = 1;
+    [SerializeField] protected int maxHealth;
     protected int currentHealth;
     public System.Action OnDead;
+    public System.Action onHealthChanged;
+
+    public int maxHp()
+    {
+        return maxHealth;
+    }    
+    public int currentHp()
+    {
+        return currentHealth;
+    }
 
     private void Start()
     {
         currentHealth = maxHealth;
+        onHealthChanged?.Invoke();
     }
 
     protected virtual void Die()
@@ -30,7 +41,8 @@ public class Health : MonoBehaviour
             return;
         }
         currentHealth -= dame;
-        if(currentHealth <= 0)
+        onHealthChanged?.Invoke();
+        if (currentHealth <= 0)
         {
             Die();
         }
