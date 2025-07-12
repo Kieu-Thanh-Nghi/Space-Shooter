@@ -344,8 +344,8 @@ GameObject:
   - component: {fileID: 1632621682350821911}
   - component: {fileID: -5772680686171217254}
   - component: {fileID: -6350998478996378932}
-  - component: {fileID: 3095978069636672126}
   - component: {fileID: 1234480483}
+  - component: {fileID: 3095978069636672126}
   m_Layer: 6
   m_Name: Enemy red
   m_TagString: Untagged
@@ -482,6 +482,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1234480483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6744357962115527886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fcfb123bc6c3f49b6dd6a649658102, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyPath: {fileID: 0}
+  flySpeed: 1
 --- !u!114 &3095978069636672126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,17 +512,3 @@ MonoBehaviour:
     type: 3}
   exploTime: 0.8
   maxHealth: 3
---- !u!114 &1234480483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6744357962115527886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01fcfb123bc6c3f49b6dd6a649658102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flyPath: {fileID: 0}
-  flySpeed: 1

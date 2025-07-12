@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    [SerializeField] int _spawnBossAfterWave;
+    [SerializeField] GameObject bossPrefab;
     public EnemyWave[] enemyWaves;
 
     private int currentWave;
@@ -28,6 +30,15 @@ public class EnemySpawner : MonoBehaviour
         {
             Invoke(nameof(SpawnEnemyWave), waveInfo.nextWaveDelay);
         }
+        if(currentWave == _spawnBossAfterWave)
+        {
+            SpawnBoss();
+        }
+    }
+
+    void SpawnBoss()
+    {
+        Instantiate(bossPrefab);
     }
 }
 

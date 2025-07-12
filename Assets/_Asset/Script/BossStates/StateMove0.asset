@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff400bb9558d40643833f3afc49d8c90, type: 3}
+  m_Name: StateMove0
+  m_EditorClassIdentifier: 
+  path: {fileID: 2888619343182827324, guid: 8b64e0235f2d7de4fb64051fa7f3579b, type: 3}
+  stateTime: 4
+  speed: 1
+  NextState: 1
