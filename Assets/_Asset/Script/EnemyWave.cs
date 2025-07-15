@@ -1,8 +1,6 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Wave", menuName = "My ScriptableObject/DataEnemyWave")]
-
-[System.Serializable]
 public class EnemyWave: ScriptableObject
 {
     public Transform enemyPrefab;
