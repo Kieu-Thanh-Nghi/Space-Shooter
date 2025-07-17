@@ -11,7 +11,10 @@ public class EnemySpawner : MonoBehaviour
     private int currentWave;
 
     // Start is called before the first frame update
-    void Start() => SpawnEnemyWave();
+    void Start() {
+        EnemyHealth.LivingEnemyCount++;
+        SpawnEnemyWave();
+    }
 
     private void SpawnEnemyWave()
     {
@@ -29,6 +32,10 @@ public class EnemySpawner : MonoBehaviour
         if (currentWave < enemyWaves.Length)
         {
             Invoke(nameof(SpawnEnemyWave), waveInfo.nextWaveDelay);
+        }
+        if (currentWave == enemyWaves.Length-1)
+        {
+            EnemyHealth.LivingEnemyCount--;
         }
         if(currentWave == _spawnBossAfterWave)
         {

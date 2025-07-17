@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class FlyPathAgent : MonoBehaviour
 {
     public FlyPath flyPath;
     public float flySpeed;
     private int nextIndex = 1;
+    public float sa;
     Rigidbody2D rb;
 
     private void Start()
@@ -35,8 +35,7 @@ public class FlyPathAgent : MonoBehaviour
     }
 
     private void FlyToNextWaypoint()
-    { 
-        //transform.position = Vector3.MoveTowards(transform.position, flyPath[nextIndex], flySpeed * Time.deltaTime);
+    {
         transform.position = Vector3.MoveTowards(transform.position, flyPath[nextIndex], flySpeed * Time.deltaTime);
     }
     private void LookAt(Vector2 destination)
@@ -44,9 +43,9 @@ public class FlyPathAgent : MonoBehaviour
         Vector2 position = transform.position;
         var lookDirection = destination - position;
         if (lookDirection.magnitude < 0.01f) return;
-        var angle = Vector2.Angle(-transform.up, lookDirection) / 100;
-        if (Vector2.SignedAngle(-transform.up, lookDirection) < 0.1f) return;
-        transform.Rotate(Vector3.forward, angle);
+        var angle = Vector2.SignedAngle(-transform.up, lookDirection);
+        if (Mathf.Abs(angle) < 0.1f) return;
+        transform.Rotate(Vector3.forward, angle / 50);
     }
 }
 

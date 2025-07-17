@@ -16,7 +16,6 @@ public class BossStateMachine : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(Time.time);
         ChangeState(StateIndex.State0);
     }
 
@@ -24,7 +23,6 @@ public class BossStateMachine : MonoBehaviour
     {
         if (currentState.TheNextState() != StateIndex.DontChange)
         {
-            Debug.Log(Time.time);
             ChangeState(currentState.TheNextState());
         }
         currentState?.UpdateState();

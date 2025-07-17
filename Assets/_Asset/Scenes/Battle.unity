@@ -1391,7 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa7ca5ec2a775843a3a6f38167e99b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnBossAfterWave: 3
+  _spawnBossAfterWave: 9
   bossPrefab: {fileID: 7339775742517242587, guid: e3b14b97256a58d48a155cac689a207a,
     type: 3}
   enemyWaves:
