@@ -15,4 +15,4 @@ MonoBehaviour:
   path: {fileID: 6911683311248157789, guid: 032d425958760b04e921024687ec64b4, type: 3}
   stateTime: 5
   speed: 7
-  NextState: 1
+  NextState: 3

@@ -1,51 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Dreamteck.Splines;
+
 public class FlyPathAgent : MonoBehaviour
 {
-    public FlyPath flyPath;
     public float flySpeed;
-    private int nextIndex = 1;
-    public float sa;
-    Rigidbody2D rb;
+    public SplineComputer splineComputer;
+    [SerializeField] SplineFollower splineFollower;
+
+    
 
     private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
+    {           
+        if(splineComputer != null) splineFollower.spline = splineComputer;
+        splineFollower.followSpeed = flySpeed;
+        splineFollower.onEndReached += OnEndPoint;
+        splineFollower.enabled = false;
+        //myCurve = flyPath.myCurve;
     }
 
-    void Update()
+    void OnEndPoint(double d)
     {
-        if (flyPath == null) return;
-        if (nextIndex >= flyPath.waypoints.Length) 
-        {
-            EnemyHealth.LivingEnemyCount--;
-            Destroy(gameObject);
-            return;
-        }
-        if (transform.position != flyPath[nextIndex])
-        {
-            FlyToNextWaypoint();
-            LookAt(flyPath[nextIndex]);
-        }
-        else
-        {
-            nextIndex++;
-        }
+        EnemyHealth.LivingEnemyCount--;
+        Destroy(gameObject);
     }
 
-    private void FlyToNextWaypoint()
+    public void EnableEnemy(float afterTime)
     {
-        transform.position = Vector3.MoveTowards(transform.position, flyPath[nextIndex], flySpeed * Time.deltaTime);
+        Invoke(nameof(EnableSplineFollower), afterTime);
     }
-    private void LookAt(Vector2 destination)
+
+    void EnableSplineFollower()
     {
-        Vector2 position = transform.position;
-        var lookDirection = destination - position;
-        if (lookDirection.magnitude < 0.01f) return;
-        var angle = Vector2.SignedAngle(-transform.up, lookDirection);
-        if (Mathf.Abs(angle) < 0.1f) return;
-        transform.Rotate(Vector3.forward, angle / 50);
+        splineFollower.enabled = true;
     }
 }
 

@@ -7,5 +7,6 @@ public enum StateIndex
     DontChange = -1,
     State0 = 0,
     State1 = 1,
-    State2 = 2
+    State2 = 2,
+    StageShootStraight = 3
 }

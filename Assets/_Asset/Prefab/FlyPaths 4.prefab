@@ -61,6 +61,85 @@ MonoBehaviour:
   - {fileID: 8518057433097466406}
   - {fileID: 8518057432011519539}
   - {fileID: 8518057432327385875}
+  myCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -2.3354964
+      value: -2.6325774
+      inSlope: 24.722212
+      outSlope: 24.722212
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: -2.1554964
+      value: 1.8174224
+      inSlope: 14.09245
+      outSlope: 14.09245
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: -1.4854965
+      value: 4.1374226
+      inSlope: 0.043539166
+      outSlope: 0.043539166
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.56450355
+      value: -2.7825775
+      inSlope: -0.23085093
+      outSlope: -0.23085093
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.0745034
+      value: 1.6174226
+      inSlope: -59.543102
+      outSlope: -59.543102
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.1245034
+      value: -4.4825773
+      inSlope: -32.750076
+      outSlope: -32.750076
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.2645035
+      value: 3.4274225
+      inSlope: 14.035704
+      outSlope: 14.035704
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 2.4045036
+      value: -0.5525775
+      inSlope: -28.42855
+      outSlope: -28.42855
+      tangentMode: 0
+      weightedMode: 3
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  v: 0
 --- !u!1001 &4867784339820970104
 PrefabInstance:
   m_ObjectHideFlags: 0

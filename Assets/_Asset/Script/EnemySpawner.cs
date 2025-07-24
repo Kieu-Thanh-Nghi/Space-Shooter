@@ -19,14 +19,13 @@ public class EnemySpawner : MonoBehaviour
     private void SpawnEnemyWave()
     {
         var waveInfo = enemyWaves[currentWave];
-        var startPosition = waveInfo.flyPath[0];
         for (int i = 0; i < waveInfo.numberOfEnemy; i++)
         {
-            var enemy = Instantiate(waveInfo.enemyPrefab, startPosition, Quaternion.identity);
+            var enemy = Instantiate(waveInfo.enemyPrefab);
             var agent = enemy.GetComponent<FlyPathAgent>();
-            agent.flyPath = waveInfo.flyPath;
+            agent.splineComputer = waveInfo.splineComputer;
             agent.flySpeed = waveInfo.speed;
-            startPosition += waveInfo.formationOffset;
+            agent.EnableEnemy(waveInfo.timeOffset * i);
         }
         currentWave++;
         if (currentWave < enemyWaves.Length)

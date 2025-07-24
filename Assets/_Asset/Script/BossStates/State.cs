@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class State : ScriptableObject
 {
-    public abstract void EnterState(GameObject Boss);
+    public abstract void EnterState(GameObject boss);
 
     public abstract void ExitState();
 

@@ -12,7 +12,7 @@ public class EnemyMove : MonoBehaviour
     {
         gameObject.transform.position = flyPath[0];
     }
-    public void Move()
+    public void Move(bool isLook = true)
     {
         if (flyPath == null) return;
         if (nextIndex >= flyPath.waypoints.Length)
@@ -22,7 +22,7 @@ public class EnemyMove : MonoBehaviour
         if (transform.position != flyPath[nextIndex])
         {
             FlyToNextWaypoint();
-            LookAt(flyPath[nextIndex]);
+            if(isLook) LookAt(flyPath[nextIndex]);
         }
         else
         {

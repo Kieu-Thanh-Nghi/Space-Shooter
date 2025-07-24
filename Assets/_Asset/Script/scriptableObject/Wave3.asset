@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9879cb30290e38a4693dcd2b448b4d97, type: 3}
   m_Name: Wave3
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 779013896435897544, guid: 07cab69970744904c9a57f9f2ea95ead,
+  enemyPrefab: {fileID: 2892785809794122047, guid: 246296b381d18f74b9a4afc7e9c277d9,
     type: 3}
   numberOfEnemy: 10
-  formationOffset: {x: 0, y: 2, z: 0}
-  flyPath: {fileID: 28964637827505100, guid: 2651f896ccb04ce48b5c03be0a59116e, type: 3}
+  timeOffset: 1
   speed: 3
   nextWaveDelay: 5
+  splineComputer: {fileID: 5716376360096744999, guid: 9a39811c97f0ce24abbfc87aaed87c72,
+    type: 3}
